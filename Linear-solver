@@ -2,6 +2,10 @@
 #a=string.ascii_lowercase
 #for n in a:
 #    n = 0
+y = 0
+x = 0
+m = 0 
+b = 0
 def solver(input):
     list1 = input.split("=")
     right = list1[1]
