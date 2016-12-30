@@ -1,0 +1,28 @@
+y = 0
+m = 0
+x = 0
+b = 0
+def solver(input):
+    list1 = input.split("=")
+    right = list1[1]
+    if input.startswith("y"):
+        if list1[0].find("+") != -1:
+            plus_list = list1[0].split("+")
+            right = right + "-" + plus_list[1]
+        if list1[0].find("-") != -1:
+            minus_list = list1[0].split("-")
+            right = right + "+" + minus_list[1]
+        answer = eval(right)
+    else: 
+        left1 = list1[0].replace("y","")
+        if list1[0].find("+") != -1:
+            plus_list = list1[0].split("+")
+            right = right + "-" + plus_list[1]
+            left1 = plus_list[0].replace("y","")
+        if list1[0].find("-") != -1:
+            minus_list = list1[0].split("-")
+            right = right + "+" + minus_list[1]
+            left1 = minus_list[0].replace("y","")
+        left = left1.replace("*","")
+        answer = eval(right) / eval(left)
+        print(answer)
