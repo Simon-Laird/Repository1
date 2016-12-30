@@ -25,4 +25,4 @@ def solver(input):
             left1 = minus_list[0].replace("y","")
         left = left1.replace("*","")
         answer = eval(right) / eval(left)
-        print(answer)
+print(answer)
